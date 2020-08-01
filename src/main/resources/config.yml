@@ -1,0 +1,4 @@
+on-death-message: "§l§fYou died at §a[§f%d %d %d§a]"
+on-hover-message: "Click to copy these coordinates to chat"
+on-click-pattern: "%d %d %d"
+log-death-coords: false

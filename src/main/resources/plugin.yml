@@ -1,0 +1,12 @@
+name: DeathWhispers
+version: ${project.version}
+main: ideias.mano.deathWhispers.DeathWhispers
+api-version: 1.15
+load: STARTUP
+authors: [MestreProno]
+description: A plugin that, whenever you die, whispers to you the coordinates you were at when you died.
+website: https://github.com/brunofauth
+permissions:
+  deathwhispers.getWhispered:
+    description: Allows the player to, whenever he/she dies, get whispered the coordinates he/she was at when he/she died
+    default: true
