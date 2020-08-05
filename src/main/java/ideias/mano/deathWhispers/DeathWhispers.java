@@ -1,6 +1,5 @@
 package ideias.mano.deathWhispers;
 
-import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
@@ -66,7 +65,19 @@ public final class DeathWhispers extends JavaPlugin implements Listener {
 
         event.getEntity().spigot().sendMessage(msg);
 
-        if (this.getConfig().getBoolean("log-death-coords"))
-            this.getLogger().info(event.getEntity().getName() + "died at" + coords);
+        if (this.getConfig().getBoolean("log-death-coords")) {
+            Location pos = event.getEntity().getLocation();
+            this.getLogger().info(
+                String.format(
+                    "%s died at X=%d, Y=%d, Z=%d in dimension %s of world '%s'",
+                    event.getEntity().getName(),
+                    pos.getBlockX(),
+                    pos.getBlockY(),
+                    pos.getBlockZ(),
+                    event.getEntity().getWorld().getEnvironment().name(),
+                    event.getEntity().getWorld().getName()
+                )
+            );
+        }
     }
 }

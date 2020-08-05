@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ideias.mano.deathWhispers</groupId>
-    <artifactId>ideias.mano.deathWhispers</artifactId>
+    <artifactId>DeathWhispers</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>deathWhispers</name>
+    <name>DeathWhispers</name>
 
     <description>A plugin that whispers to you the coordinates where you were when you died, when you die.</description>
     <properties>
